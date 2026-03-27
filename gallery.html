@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Gallery – AsiaJCIS 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-day-card {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+      transition: transform .25s, box-shadow .25s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .gallery-day-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.18);
+    }
+    .gallery-day-card .thumb {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, var(--primary), #2980b9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: rgba(255,255,255,.4);
+      position: relative;
+    }
+    .gallery-day-card .thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .gallery-day-card .thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 60%);
+    }
+    .gallery-day-card .card-footer-custom {
+      background: #fff;
+      padding: 20px 24px;
+      border-top: 3px solid var(--primary);
+    }
+    /* Lightbox-style grid for individual photos */
+    .photo-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: zoom-in;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    }
+  </style>
+</head>
+<body>
+  <script src="js/nav.js"></script>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1><i class="bi bi-images me-2"></i>Conference Gallery</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Conference Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main class="py-5">
+    <div class="container-xl">
+
+      <h2 class="section-title">AsiaJCIS 2026 Photo Gallery</h2>
+      <p class="text-muted mb-5">Browse photos. (TBD)</p>
+
+      <!-- Day Cards -->
+      <!-- <div class="row g-4 mb-5">
+        <div class="col-md-6">
+          <a class="gallery-day-card" href="gallery_day1.html">
+            <div class="thumb">
+              <img src="https://asiajcis2026.sch.ac.kr/day1/day1_01.jpeg" alt="Day 1" onerror="this.style.display='none'">
+              <div class="thumb-overlay"></div>
+              <i class="bi bi-camera" style="position:relative;z-index:1;"></i>
+            </div>
+            <div class="card-footer-custom d-flex align-items-center justify-content-between">
+              <div>
+                <h5 class="fw-bold mb-0" style="color:var(--primary);">Day 1 Photos</h5>
+                <p class="text-muted small mb-0">August 12, 2026</p>
+              </div>
+              <i class="bi bi-arrow-right-circle fs-3 text-primary"></i>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a class="gallery-day-card" href="gallery_day2.html">
+            <div class="thumb">
+              <img src="https://asiajcis2026.sch.ac.kr/day2/day2_17.jpg" alt="Day 2" onerror="this.style.display='none'">
+              <div class="thumb-overlay"></div>
+              <i class="bi bi-camera" style="position:relative;z-index:1;"></i>
+            </div>
+            <div class="card-footer-custom d-flex align-items-center justify-content-between">
+              <div>
+                <h5 class="fw-bold mb-0" style="color:var(--primary);">Day 2 Photos</h5>
+                <p class="text-muted small mb-0">August 13, 2026</p>
+              </div>
+              <i class="bi bi-arrow-right-circle fs-3 text-primary"></i>
+            </div>
+          </a>
+        </div>
+      </div> -->
+
+      <!-- Placeholder notice -->
+      <div class="alert alert-info text-center">
+        <i class="bi bi-info-circle me-2"></i>
+        Conference photos are available after the event.
+      </div>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

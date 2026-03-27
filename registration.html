@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration – AsiaJCIS 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Tab pills */
+    .reg-tab-btn {
+      min-width: 220px;
+      border-radius: 50px !important;
+      font-weight: 600;
+      font-size: .95rem;
+      transition: all .2s;
+    }
+    .nav-pills .nav-link.active.reg-tab-btn { box-shadow: 0 4px 14px rgba(26,58,107,.25); }
+
+    /* Post-payment steps */
+    .step-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #f8faff;
+      border: 1px solid #d0dff8;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .step-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .step-num.accent { background: var(--accent); }
+    .form-field-tag {
+      display: inline-block;
+      background: #e8f4fd;
+      color: var(--accent2);
+      border: 1px solid #bee3f8;
+      border-radius: 5px;
+      padding: 1px 8px;
+      font-size: .8rem;
+      font-weight: 600;
+      margin: 2px 2px 2px 0;
+    }
+    .form-field-tag.required::after {
+      content: ' *';
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <script src="js/nav.js"></script>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1><i class="bi bi-pencil-square me-2"></i>Registration</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Registration</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main class="py-5">
+    <div class="container-xl">
+
+      <!-- ══ Tab Navigation ══ -->
+      <ul class="nav nav-pills mb-5 justify-content-center gap-2 flex-wrap" id="regTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active reg-tab-btn px-4 py-2" id="en-tab"
+            data-bs-toggle="pill" data-bs-target="#en-content" type="button">
+            <i class="bi bi-globe2 me-2"></i>International Participants
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link reg-tab-btn px-4 py-2" id="cn-tab"
+            data-bs-toggle="pill" data-bs-target="#cn-content" type="button">
+            🇨🇳 Chinese Participants (中国参会者)
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+
+        <!-- ══════════════════════════════════
+             INTERNATIONAL PARTICIPANTS (USD)
+        ══════════════════════════════════ -->
+        <div class="tab-pane fade show active" id="en-content">
+          <div class="row g-5">
+            <div class="col-lg-8">
+
+              <!-- Deadline alert -->
+              <div class="alert alert-warning d-flex gap-3 mb-4">
+                <i class="bi bi-exclamation-triangle-fill fs-4 flex-shrink-0 mt-1"></i>
+                <div>
+                  <strong>Registration &amp; Presenter Deadline:</strong>
+                  <span class="text-danger fw-bold ms-2">TBD, 2026</span>
+                  <span class="text-muted small ms-1">(UTC+08:00)</span><br>
+                  <em class="small">At least one author per accepted paper or poster must register as an attending participant by this date.</em>
+                </div>
+              </div>
+
+              <!-- Authors notice -->
+              <div class="card shadow-sm mb-4" style="border-left: 4px solid var(--accent2);">
+                <div class="card-header text-white" style="background:var(--accent2);">
+                  <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Notice for Authors of Accepted Papers</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li class="mb-2">For each accepted paper, at least one of the authors is required to register as a <strong>General Participant (Offline Attendance)</strong>.</li>
+                    <li class="mb-2">This applies regardless of whether the registering author is a student or not.</li>
+                    <li>In cases where both a student and a non-student author attend, the student may register as <em>Student</em>, while the non-student author must register as <em>General Participant</em>.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Fee Table -->
+              <h3 class="section-subtitle">Registration Fees (USD)</h3>
+              <div class="table-responsive shadow-sm rounded mb-2">
+                <table class="table reg-fee-table mb-0">
+                  <thead>
+                    <tr>
+                      <th class="py-3 ps-4">Category</th>
+                      <th class="py-3 pe-4 text-end">Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ps-4 py-3">
+                        <i class="bi bi-mortarboard me-2 text-primary"></i>
+                        <strong>Student</strong>
+                        <span class="badge bg-light text-secondary border ms-2 fw-normal">Offline Attendance</span>
+                      </td>
+                      <td class="pe-4 text-end fw-bold py-3 fs-5 text-success">400 USD</td>
+                    </tr>
+                    <tr>
+                      <td class="ps-4 py-3">
+                        <i class="bi bi-person-badge me-2 text-primary"></i>
+                        <strong>General Participant</strong>
+                        <span class="badge bg-light text-secondary border ms-2 fw-normal">Offline Attendance</span>
+                      </td>
+                      <td class="pe-4 text-end fw-bold py-3 fs-5 text-success">500 USD</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-muted small mb-4">
+                <i class="bi bi-check-circle text-success me-1"></i>Registration includes: offline conference participation, access to online proceedings, two lunches, one banquet, and a souvenir.
+              </p>
+
+              <!-- Online Registration -->
+              <h3 class="section-subtitle">Step 1 — Complete Online Payment</h3>
+              <div class="text-center p-4 rounded mb-4" style="background:var(--light-bg); border:2px dashed var(--accent2);">
+                <p class="text-muted mb-1 small fw-semibold text-uppercase">Complete your registration payment here</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf53ZzZD_NgFTlpJRoLIYmqxDPTpSiNmJwoqmts9Yv8qVgZVg/viewform?usp=send_form"
+                   target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom btn-lg px-5 my-2">
+                  <i class="bi bi-pencil-square me-2"></i>Register &amp; Pay Online
+                </a>
+                <p class="text-muted small mt-2 mb-0">On-site registration is also available at the venue (credit card only, same fees apply).</p>
+              </div>
+
+              <!-- Post-payment form notice -->
+              <h3 class="section-subtitle">Step 2 — Submit Your Paper Registration Form</h3>
+              <div class="card shadow-sm mb-4" style="border-left:4px solid var(--accent);">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <i class="bi bi-exclamation-circle-fill fs-5" style="color:var(--accent);"></i>
+                    <strong>After completing payment, you must submit the paper registration form.</strong>
+                  </div>
+                  <p class="text-muted mb-3">Once your payment is confirmed, please fill in and submit the paper registration form with the following information:</p>
+
+                  <div class="step-box">
+                    <div class="step-num">1</div>
+                    <div>
+                      <div class="fw-semibold mb-1">Paper Identification</div>
+                      <span class="form-field-tag required">Paper ID</span>
+                      <p class="text-muted small mb-0 mt-1">Enter the Paper ID as assigned in the EasyChair submission system.</p>
+                    </div>
+                  </div>
+
+                  <div class="step-box">
+                    <div class="step-num">2</div>
+                    <div>
+                      <div class="fw-semibold mb-1">Paper Details</div>
+                      <span class="form-field-tag required">Paper Title</span>
+                      <span class="form-field-tag required">Author Name(s)</span>
+                      <p class="text-muted small mb-0 mt-1">Provide the full title of the paper and the names of all authors exactly as they appear in the submission.</p>
+                    </div>
+                  </div>
+
+                  <div class="step-box">
+                    <div class="step-num accent">3</div>
+                    <div>
+                      <div class="fw-semibold mb-1">Registrant Information</div>
+                      <span class="form-field-tag required">Your Name</span>
+                      <p class="text-muted small mb-0 mt-1">Provide the name of the person completing the registration (the attending presenter).</p>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-light border mt-3 mb-0 small">
+                    <i class="bi bi-info-circle me-2 text-primary"></i>
+                    Fields marked <span class="text-danger fw-bold">*</span> are required. Incomplete submissions may result in processing delays. Please contact <a href="mailto:asiajcis2026@easychair.org">asiajcis2026@easychair.org</a> if you need assistance.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Policy -->
+              <h3 class="section-subtitle">Registration Policy</h3>
+              <div class="alert alert-danger">
+                <i class="bi bi-x-circle me-2"></i>
+                <strong>No refunds, cancellations, or substitutions</strong> are available once registration is completed.
+              </div>
+              <ul>
+                <li>At least one presenter per accepted paper or poster must register for the conference.</li>
+              </ul>
+
+              <!-- Contact -->
+              <h3 class="section-subtitle">Contact Information</h3>
+              <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                <p class="mb-3">For further information regarding the conference, please contact:</p>
+                <p class="mb-2">
+                  <i class="bi bi-envelope me-2 text-primary"></i>
+                  <strong>Program Co-Chair:</strong>
+                  <a href="mailto:changsongyang@guet.edu.cn">zemisolsol@sungshin.ac.kr</a>
+                  <span class="text-muted small ms-1">(Hyunwoo Choi)</span>
+                </p>
+                <p class="mb-2">
+                  <i class="bi bi-envelope me-2 text-primary"></i>
+                  <strong>Program Co-Chair:</strong>
+                  <a href="mailto:changsongyang@guet.edu.cn">tonymhwang@cs.ccu.edu.tw</a>
+                  <span class="text-muted small ms-1">(Ming-Hung Wang)</span>
+                </p>
+                <p class="mb-2">
+                  <i class="bi bi-envelope me-2 text-primary"></i>
+                  <strong>Program Co-Chair :</strong>
+                  <a href="mailto:changsongyang@guet.edu.cn">tianliwei@gdust.edu.cn</a>
+                  <span class="text-muted small ms-1">(Liwei Tian)</span>
+                </p>
+                <p class="mb-2">
+                  <i class="bi bi-envelope me-2 text-primary"></i>
+                  <strong>Program Co-Chair :</strong>
+                  <a href="mailto:changsongyang@guet.edu.cn">changsongyang@guet.edu.cn</a>
+                  <span class="text-muted small ms-1">(Changsong Yang)</span>
+                </p>
+     
+              </div>
+              </div>
+
+            </div><!-- /col-lg-8 -->
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+              <div class="card border-0 shadow mb-4">
+                <div class="card-header text-white py-3" style="background:var(--primary);">
+                  <h5 class="mb-0"><i class="bi bi-calendar-event me-2"></i>Important Date</h5>
+                </div>
+                <div class="card-body text-center">
+                  <div class="text-muted small mb-1">Registration Deadline</div>
+                  <div class="fw-bold text-danger" style="font-size:1.4rem;">TBD, 2026</div>
+                  <div class="text-muted small">(UTC+08:00)</div>
+                </div>
+              </div>
+
+              <div class="card border-0 shadow mb-4">
+                <div class="card-header py-3" style="background:var(--light-bg);">
+                  <h6 class="mb-0 fw-bold"><i class="bi bi-list-ol me-2" style="color:var(--accent);"></i>Registration Steps</h6>
+                </div>
+                <div class="card-body">
+                  <ol class="mb-0 ps-3" style="font-size:.88rem; line-height:2;">
+                    <li>Pay registration fee online</li>
+                    <li>Submit paper registration form</li>
+                    <li>Receive confirmation email</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="card border-0 shadow">
+                <div class="card-body">
+                  <h6 class="fw-bold mb-3">Related Links</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="venue.html" class="text-decoration-none"><i class="bi bi-geo-alt me-2 text-primary"></i>Venue Info</a></li>
+                    <li><a href="banquet.html" class="text-decoration-none"><i class="bi bi-cup-hot me-2 text-primary"></i>Banquet</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /en-content -->
+
+
+        <!-- ══════════════════════════════════
+             CHINESE PARTICIPANTS (CNY)
+        ══════════════════════════════════ -->
+        <div class="tab-pane fade" id="cn-content">
+          <div class="row g-5">
+            <div class="col-lg-8">
+
+              <!-- Deadline alert -->
+              <div class="alert alert-warning d-flex gap-3 mb-4">
+                <i class="bi bi-exclamation-triangle-fill fs-4 flex-shrink-0 mt-1"></i>
+                <div>
+                  <strong>注册及报告者截止日期：</strong>
+                  <span class="text-danger fw-bold ms-2">待定，2026年</span>
+                  <span class="text-muted small ms-1">(UTC+08:00)</span><br>
+                  <em class="small">每篇录用论文或海报至少需有一位作者在截止日期前完成注册。</em>
+                </div>
+              </div>
+
+              <!-- Authors notice -->
+              <div class="card shadow-sm mb-4" style="border-left: 4px solid var(--accent2);">
+                <div class="card-header text-white" style="background:var(--accent2);">
+                  <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>录用论文作者须知</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li class="mb-2">每篇录用论文至少需要一位作者以<strong>普通参会者（线下出席）</strong>身份完成注册。</li>
+                    <li class="mb-2">无论注册者是否为学生，上述要求均适用。</li>
+                    <li>若论文中同时有学生作者和非学生作者参会，学生作者可以<em>学生</em>身份注册，而非学生作者须以<em>普通参会者</em>身份注册。</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Fee Table -->
+              <h3 class="section-subtitle">注册费用（人民币 CNY）</h3>
+              <div class="table-responsive shadow-sm rounded mb-2">
+                <table class="table reg-fee-table mb-0">
+                  <thead>
+                    <tr>
+                      <th class="py-3 ps-4">类别</th>
+                      <th class="py-3 pe-4 text-end">费用</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ps-4 py-3">
+                        <i class="bi bi-mortarboard me-2 text-primary"></i>
+                        <strong>学生</strong>
+                        <span class="badge bg-light text-secondary border ms-2 fw-normal">线下出席</span>
+                      </td>
+                      <td class="pe-4 text-end fw-bold py-3 fs-5 text-success">2,800 CNY</td>
+                    </tr>
+                    <tr>
+                      <td class="ps-4 py-3">
+                        <i class="bi bi-person-badge me-2 text-primary"></i>
+                        <strong>普通参会者</strong>
+                        <span class="badge bg-light text-secondary border ms-2 fw-normal">线下出席</span>
+                      </td>
+                      <td class="pe-4 text-end fw-bold py-3 fs-5 text-success">3,500 CNY</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-muted small mb-4">
+                <i class="bi bi-check-circle text-success me-1"></i>注册费包含：线下会议参与资格、在线论文集访问权限、两次午餐、一次晚宴及纪念品。
+              </p>
+
+              <!-- Online Payment -->
+              <h3 class="section-subtitle">第一步 — 完成在线缴费</h3>
+              <div class="text-center p-4 rounded mb-4" style="background:var(--light-bg); border:2px dashed var(--accent2);">
+                <p class="text-muted mb-1 small fw-semibold text-uppercase">点击下方链接完成注册缴费</p>
+                <a href="#" class="btn btn-primary-custom btn-lg px-5 my-2">
+                  <i class="bi bi-box-arrow-up-right me-2"></i>中国参会者注册缴费入口
+                </a>
+                <p class="text-muted small mt-2 mb-0">现场注册同样可用，费用与线上注册相同，支持刷卡支付。</p>
+              </div>
+
+              <!-- Post-payment form notice -->
+              <h3 class="section-subtitle">第二步 — 提交论文注册表</h3>
+              <div class="card shadow-sm mb-4" style="border-left:4px solid var(--accent);">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <i class="bi bi-exclamation-circle-fill fs-5" style="color:var(--accent);"></i>
+                    <strong>完成缴费后，您需要提交论文注册表。</strong>
+                  </div>
+                  <p class="text-muted mb-3">缴费确认后，请填写并提交论文注册表，需包含以下信息：</p>
+
+                  <div class="step-box">
+                    <div class="step-num">1</div>
+                    <div>
+                      <div class="fw-semibold mb-1">论文编号</div>
+                      <span class="form-field-tag required">Paper ID（论文编号）</span>
+                      <p class="text-muted small mb-0 mt-1">请填写 EasyChair 投稿系统中分配的论文编号。</p>
+                    </div>
+                  </div>
+
+                  <div class="step-box">
+                    <div class="step-num">2</div>
+                    <div>
+                      <div class="fw-semibold mb-1">论文信息</div>
+                      <span class="form-field-tag required">论文题目（Paper Title）</span>
+                      <span class="form-field-tag required">作者姓名（Author Name(s)）</span>
+                      <p class="text-muted small mb-0 mt-1">请提供与投稿系统中完全一致的论文题目及全部作者姓名。</p>
+                    </div>
+                  </div>
+
+                  <div class="step-box">
+                    <div class="step-num accent">3</div>
+                    <div>
+                      <div class="fw-semibold mb-1">注册人信息</div>
+                      <span class="form-field-tag required">您的姓名（Your Name）</span>
+                      <p class="text-muted small mb-0 mt-1">请填写完成注册的参会者本人姓名（即出席报告的作者）。</p>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-light border mt-3 mb-0 small">
+                    <i class="bi bi-info-circle me-2 text-primary"></i>
+                    标有 <span class="text-danger fw-bold">*</span> 的字段为必填项。信息不完整可能导致处理延迟。如需帮助，请联系 <a href="mailto:asiajcis2026@easychair.org">asiajcis2026@easychair.org</a>。
+                  </div>
+                </div>
+              </div>
+
+              <!-- Policy -->
+              <h3 class="section-subtitle">注册政策</h3>
+              <div class="alert alert-danger">
+                <i class="bi bi-x-circle me-2"></i>
+                <strong>注册完成后，恕不接受退款、取消或转让申请。</strong>
+              </div>
+              <ul>
+                <li>每篇录用论文或海报至少需有一名报告者完成注册。</li>
+              </ul>
+
+              <!-- Contact -->
+              <h3 class="section-subtitle">联系方式</h3>
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <p class="fw-bold mb-2">AsiaJCIS 2026 组委会</p>
+                  <p class="mb-1"><i class="bi bi-person me-2 text-primary"></i><strong>项目联席主席：</strong>杨长松（Changsong Yang）</p>
+                  <p class="mb-0"><i class="bi bi-envelope me-2 text-primary"></i><strong>邮箱：</strong><a href="mailto:changsongyang@guet.edu.cn">changsongyang@guet.edu.cn</a></p>
+                </div>
+              </div>
+
+            </div><!-- /col-lg-8 -->
+
+            <!-- Sidebar CN -->
+            <div class="col-lg-4">
+              <div class="card border-0 shadow mb-4">
+                <div class="card-header text-white py-3" style="background:var(--primary);">
+                  <h5 class="mb-0"><i class="bi bi-calendar-event me-2"></i>注册截止日期</h5>
+                </div>
+                <div class="card-body text-center">
+                  <div class="text-muted small mb-1">Registration Deadline</div>
+                  <div class="fw-bold text-danger" style="font-size:1.4rem;">待定，2026年</div>
+                  <div class="text-muted small">(UTC+08:00)</div>
+                </div>
+              </div>
+
+              <div class="card border-0 shadow mb-4">
+                <div class="card-header py-3" style="background:var(--light-bg);">
+                  <h6 class="mb-0 fw-bold"><i class="bi bi-list-ol me-2" style="color:var(--accent);"></i>注册流程</h6>
+                </div>
+                <div class="card-body">
+                  <ol class="mb-0 ps-3" style="font-size:.88rem; line-height:2;">
+                    <li>在线完成注册缴费</li>
+                    <li>提交论文注册表</li>
+                    <li>接收确认邮件</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="card border-0 shadow">
+                <div class="card-body">
+                  <h6 class="fw-bold mb-3">相关链接</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="venue.html" class="text-decoration-none"><i class="bi bi-geo-alt me-2 text-primary"></i>会场信息</a></li>
+                    <li><a href="banquet.html" class="text-decoration-none"><i class="bi bi-cup-hot me-2 text-primary"></i>晚宴信息</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /cn-content -->
+
+
+   
+
+      </div><!-- /tab-content -->
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>

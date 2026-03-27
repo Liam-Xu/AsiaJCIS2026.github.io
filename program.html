@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program – AsiaJCIS 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .program-day-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 8px 8px 0 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    .prog-time { font-weight: 700; color: var(--primary); white-space: nowrap; font-size: .85rem; }
+    .prog-type-badge { font-size: .7rem; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
+    .row-break    { background: #f8f9fa; }
+    .row-keynote  { background: #fff8e1; }
+    .row-invited  { background: #e3f2fd; }
+    .row-session  { background: #fff; }
+    .row-lunch    { background: #fce4ec; }
+    .row-social   { background: #e8f5e9; }
+    .prog-title   { font-size: .875rem; font-weight: 600; }
+    .prog-author  { font-size: .8rem; color: #555; }
+    .prog-chair   { font-size: .75rem; color: #888; font-style: italic; }
+  </style>
+</head>
+<body>
+  <script src="js/nav.js"></script>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1><i class="bi bi-calendar3 me-2"></i>Conference Program</h1>
+      <p class="lead opacity-75">August 4–5, 2026 | Guangdong, China</p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Program</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main class="py-5">
+    <div class="container-xl">
+
+      <!-- Legend -->
+      <div class="d-flex flex-wrap gap-2 mb-4 align-items-center">
+        <span class="text-muted small fw-semibold me-2">Legend:</span>
+        <span class="badge" style="background:#fff8e1;color:#333;border:1px solid #ffe082;">Keynote</span>
+        <span class="badge" style="background:#e3f2fd;color:#333;border:1px solid #90caf9;">Invited Talk</span>
+        <span class="badge bg-success">Regular Paper</span>
+        <span class="badge bg-info">Short Paper</span>
+        <span class="badge" style="background:#fce4ec;color:#333;border:1px solid #f48fb1;">Lunch / Social</span>
+      </div>
+
+      <!-- ══ DAY 1 ══ -->
+      <div class="mb-5 shadow-sm rounded overflow-hidden">
+        <div class="program-day-header">
+          <i class="bi bi-calendar-day me-2"></i>Day 1 — Tuesday, August 12, 2026
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered mb-0 program-table">
+            <thead>
+              <tr>
+                <th style="width:130px;">Time</th>
+                <th style="width:220px;">Session</th>
+                <th>Title / Details</th>
+                <th style="width:180px;">Speaker / Authors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Registration -->
+              <tr class="row-break">
+                <td class="prog-time">~ 10:00</td>
+                <td><span class="prog-type-badge bg-secondary text-white">Registration</span></td>
+                <td class="prog-title">On-site Registration</td>
+                <td>—</td>
+              </tr>
+              <!-- Opening -->
+              <tr class="row-break">
+                <td class="prog-time">10:00 – 10:15</td>
+                <td><span class="prog-type-badge bg-secondary text-white">Opening</span></td>
+                <td class="prog-title">Opening Remarks
+                  <div class="prog-author mt-1">Prof. Heung Youl Youm; Welcoming remarks by Mr. Koji Nakao, Yong Ding, Hung-Min Sun</div></td>
+                <td>—</td>
+              </tr>
+              <!-- Keynote -->
+              <tr class="row-keynote">
+                <td class="prog-time">10:15 – 10:45</td>
+                <td>
+                  <span class="prog-type-badge" style="background:#ffc107;color:#000;">Keynote</span>
+                  <div class="prog-chair mt-1">Chair: Heung Youl Youm (Soonchunhyang)</div>
+                </td>
+                <td class="prog-title"><em>Advancing Trustworthy AI, our approach and cutting-edge research</em></td>
+                <td class="prog-author">Seunghyun Son<br>(TTA, President)</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">10:45 – 11:00</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Coffee Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Session 1 -->
+              <tr class="row-session">
+                <td class="prog-time" rowspan="4">11:00 – 12:10</td>
+                <td rowspan="4">
+                  <span class="prog-type-badge bg-dark text-white">Session 1</span>
+                  <div class="fw-semibold mt-1 small">Zero-Knowledge, Commitments &amp; Access Control</div>
+                  <div class="prog-chair mt-1">Chair: Jun Lee (KISTI)</div>
+                </td>
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">A Generic Zero-Knowledge Range Argument with Preprocessing</span>
+                </td>
+                <td class="prog-author">Yuki Sawai, Kyoichi Asano, Yohei Watanabe, Mitsugu Iwamoto</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Key-Value Commitments with Unlinkable Feature</span>
+                </td>
+                <td class="prog-author">Towa Tsujimura, Atsuko Miyaji</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">Tightly Secure Public-Key Encryption with Equality Test Supporting Flexible Authorization in the Standard Model</span>
+                </td>
+                <td class="prog-author">Yi-Fan Tseng, Yi-Jiin Lu, Tien-Lin Tsai, Zi-Yuan Liu</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Traceable Cross-Domain Anonymous Authentication for Distributed Vehicular Fog Computing Services</span>
+                </td>
+                <td class="prog-author">Hai Liang, Wenkang Tao, Yujue Wang, Yu Xu, Xinyong Peng</td>
+              </tr>
+              <!-- Lunch -->
+              <tr class="row-lunch">
+                <td class="prog-time">12:10 – 13:15</td>
+                <td><span class="prog-type-badge" style="background:#e91e63;color:#fff;">Lunch</span></td>
+                <td class="prog-title">Lunch Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Invited #1 -->
+              <tr class="row-invited">
+                <td class="prog-time">13:15 – 14:00</td>
+                <td>
+                  <span class="prog-type-badge" style="background:#1565c0;color:#fff;">Invited #1</span>
+                  <div class="prog-chair mt-1">Chair: Zhenwei Guo (Beilhang Univ.)</div>
+                </td>
+                <td class="prog-title"><em>Physical Layer Security Technologies: Innovations and Future Outlook</em></td>
+                <td class="prog-author">Prof. Ning Xie<br>(Shenzhen University)</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">14:00 – 14:10</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Session 2 -->
+              <tr class="row-session">
+                <td class="prog-time" rowspan="4">14:10 – 15:15</td>
+                <td rowspan="4">
+                  <span class="prog-type-badge bg-dark text-white">Session 2</span>
+                  <div class="fw-semibold mt-1 small">Privacy, Contracts &amp; Verification</div>
+                  <div class="prog-chair mt-1">Chair: Taewoong Kwon (KISTI)</div>
+                </td>
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Security Analysis on a Public-Key Inverted-Index Keyword Search Scheme with Designated Tester</span>
+                </td>
+                <td class="prog-author">Mizuki Hayashi, Keita Emura</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">A Smart Contract-based Non-Transferable Signature Verification System using Nominative Signatures</span>
+                </td>
+                <td class="prog-author">Hinata Nishino, Kazumasa Omote, Keita Emura</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">Registered Key-Policy Attribute-Based Encryption</span>
+                </td>
+                <td class="prog-author">Shih-Pei Kao, Yi-Fan Tseng, et al.</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">Privacy-Preserving Attribute Domain Reconstruction for Machine Learning</span>
+                </td>
+                <td class="prog-author">Yuto Tsujimoto, Atsuko Miyaji</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">15:15 – 15:25</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Invited #2 -->
+              <tr class="row-invited">
+                <td class="prog-time">15:25 – 16:10</td>
+                <td>
+                  <span class="prog-type-badge" style="background:#1565c0;color:#fff;">Invited #2</span>
+                  <div class="prog-chair mt-1">Chair: Akira Fujita (NICT)</div>
+                </td>
+                <td class="prog-title"><em>AI Meets Cybercrime: From Simulation to Structured Intelligence of Cybercrime Ecosystems</em></td>
+                <td class="prog-author">Prof. Yin Minn Pa Pa<br>(Yokohama National Univ.)</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">16:10 – 16:20</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Session 3 -->
+              <tr class="row-session">
+                <td class="prog-time" rowspan="4">16:20 – 17:30</td>
+                <td rowspan="4">
+                  <span class="prog-type-badge bg-dark text-white">Session 3</span>
+                  <div class="fw-semibold mt-1 small">Post-Quantum Cryptography &amp; Attacks</div>
+                  <div class="prog-chair mt-1">Chair: Junhyung Park (SCH)</div>
+                </td>
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">An Attack on Ring-LWE Using a Dynamically Adjustable Block Size BKW Algorithm</span>
+                </td>
+                <td class="prog-author">Kenjiro Hirose, Shinya Okumura, Atsuko Miyaji</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Hamming Metric Code-Based Signature Scheme With Restricted Vectors</span>
+                </td>
+                <td class="prog-author">Chik How Tan, Theo Fanuela Prabowo</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">AI-Driven Defense Mechanism for Lattice-Based Post-Quantum Cryptography: Adaptive Mitigation Against Side-Channel Attacks</span>
+                </td>
+                <td class="prog-author">Wibby A. A. Praditasari et al.</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">Comparison of Post-Quantum Signatures – FALCON vs SOLMAE with Python</span>
+                </td>
+                <td class="prog-author">Kwangjo Kim</td>
+              </tr>
+              <!-- Poster Session -->
+              <tr class="row-social">
+                <td class="prog-time">17:30 – 18:00</td>
+                <td><span class="prog-type-badge" style="background:#388e3c;color:#fff;">Poster Session</span></td>
+                <td class="prog-title"><a href="acceptedposter.html">Poster Session (On-site)</a></td>
+                <td>—</td>
+              </tr>
+              <!-- Banquet -->
+              <tr class="row-social">
+                <td class="prog-time">18:00 – 20:00</td>
+                <td><span class="prog-type-badge" style="background:#388e3c;color:#fff;">Banquet</span></td>
+                <td class="prog-title"><a href="banquet.html">Conference Banquet</a> — 12th Floor, KIST Center</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /Day 1 -->
+
+      <!-- ══ DAY 2 ══ -->
+      <div class="mb-5 shadow-sm rounded overflow-hidden">
+        <div class="program-day-header">
+          <i class="bi bi-calendar-day me-2"></i>Day 2 — Wednesday, August 13, 2026
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered mb-0 program-table">
+            <thead>
+              <tr>
+                <th style="width:130px;">Time</th>
+                <th style="width:220px;">Session</th>
+                <th>Title / Details</th>
+                <th style="width:180px;">Speaker / Authors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Registration -->
+              <tr class="row-break">
+                <td class="prog-time">~ 9:00</td>
+                <td><span class="prog-type-badge bg-secondary text-white">Registration</span></td>
+                <td class="prog-title">On-site Registration</td>
+                <td>—</td>
+              </tr>
+              <!-- Invited #3 -->
+              <tr class="row-invited">
+                <td class="prog-time">9:00 – 9:45</td>
+                <td>
+                  <span class="prog-type-badge" style="background:#1565c0;color:#fff;">Invited #3</span>
+                  <div class="prog-chair mt-1">Chair: Hayoung Seong (KISTI)</div>
+                </td>
+                <td class="prog-title"><em>The Status of IoT CIC in Korea</em></td>
+                <td class="prog-author">SuHyun Park<br>(KISA, Senior Researcher)</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">9:45 – 10:00</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Session 4 -->
+              <tr class="row-session">
+                <td class="prog-time" rowspan="3">10:00 – 11:00</td>
+                <td rowspan="3">
+                  <span class="prog-type-badge bg-dark text-white">Session 4</span>
+                  <div class="fw-semibold mt-1 small">Applications in Quantum &amp; Vehicular Systems</div>
+                  <div class="prog-chair mt-1">Chair: Ming-Hung Wang (NCC Univ.)</div>
+                </td>
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Circular Quantum Secret Sharing Based on SWAP Gates</span>
+                </td>
+                <td class="prog-author">Pei-Shiun Tsai, Tzu-Yu Liao, Wei-Rung Chen, Jason Lin, Luon-Chang Lin</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">HybridNTT: A Lightweight Learning-Based Dynamic Path Selection Framework for Fast Number Theoretic Transform</span>
+                </td>
+                <td class="prog-author">Gunsang You, Yeontae Ji, Heung Youl Youm</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Improved Integral Attack on Reduced-Round Piccolo</span>
+                </td>
+                <td class="prog-author">Naoki Shibayama, Yasutaka Igarashi</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">11:00 – 11:15</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Invited #4 -->
+              <tr class="row-invited">
+                <td class="prog-time">11:15 – 12:00</td>
+                <td>
+                  <span class="prog-type-badge" style="background:#1565c0;color:#fff;">Invited #4</span>
+                  <div class="prog-chair mt-1">Chair: Rui Tanabe (Juntendo Univ.)</div>
+                </td>
+                <td class="prog-title"><em>Computational Social Security: Uncovering Threats and Influence on Social Media</em></td>
+                <td class="prog-author">Prof. Ming-Hung Wang<br>(National Chung Cheng Univ.)</td>
+              </tr>
+              <!-- Lunch -->
+              <tr class="row-lunch">
+                <td class="prog-time">12:00 – 13:00</td>
+                <td><span class="prog-type-badge" style="background:#e91e63;color:#fff;">Lunch</span></td>
+                <td class="prog-title">Lunch Break <span class="text-muted small">(Steering Committee Meeting – Offline)</span></td>
+                <td>—</td>
+              </tr>
+              <!-- Session 5 -->
+              <tr class="row-session">
+                <td class="prog-time" rowspan="3">13:00 – 13:50</td>
+                <td rowspan="3">
+                  <span class="prog-type-badge bg-dark text-white">Session 5</span>
+                  <div class="fw-semibold mt-1 small">AI in Security: Phishing, Detection &amp; Threat Analysis</div>
+                  <div class="prog-chair mt-1">Chair: Akira Yamada (Kobe Univ.)</div>
+                </td>
+                <td>
+                  <span class="label-regular prog-type-badge">Regular</span>
+                  <span class="prog-title ms-1">Phishing Attack Simulation and Detection Strategies: A Case Study on NTNU Moodle Platform</span>
+                </td>
+                <td class="prog-author">Yao Yu Lee, Albert Guan</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">No Anonymity in Metaverse: VR User Identification Based on DTW Distance of Head-and-Arms Motions</span>
+                </td>
+                <td class="prog-author">Koki Miura, Hiroaki Kikuchi</td>
+              </tr>
+              <tr class="row-session">
+                <td>
+                  <span class="label-short prog-type-badge">Short</span>
+                  <span class="prog-title ms-1">A Lightweight and Accurate Classification Framework for Traffic Log Analysis Based on an Effective Feature Representation Method</span>
+                </td>
+                <td class="prog-author">Ayako Sasaki, Takeshi Takahashi et al.</td>
+              </tr>
+              <!-- Break -->
+              <tr class="row-break">
+                <td class="prog-time">13:50 – 14:00</td>
+                <td><span class="prog-type-badge bg-light border text-muted">Break</span></td>
+                <td class="prog-title">Break</td>
+                <td>—</td>
+              </tr>
+              <!-- Invited #5 -->
+              <tr class="row-invited">
+                <td class="prog-time">14:00 – 14:45</td>
+                <td>
+                  <span class="prog-type-badge" style="background:#1565c0;color:#fff;">Invited #5</span>
+                  <div class="prog-chair mt-1">Chair: Jun Lee (KISTI)</div>
+                </td>
+                <td class="prog-title"><em>The progress direction of Next-generation Cyber Security Research in Korea Networks</em></td>
+                <td class="prog-author">Chang-oh Kim<br>(MSIT)</td>
+              </tr>
+              <!-- Awards -->
+              <tr class="row-keynote">
+                <td class="prog-time">14:45 – 14:50</td>
+                <td><span class="prog-type-badge" style="background:#ffc107;color:#000;">🏆 Awards</span></td>
+                <td class="prog-title"><a href="awards.html">Best Paper Award Ceremony</a></td>
+                <td>—</td>
+              </tr>
+              <!-- Closing -->
+              <tr class="row-break">
+                <td class="prog-time">14:50 – 15:00</td>
+                <td><span class="prog-type-badge bg-secondary text-white">Closing</span></td>
+                <td class="prog-title">Closing Remarks</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /Day 2 -->
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/footer.js"></script>
+</body>
+</html>
